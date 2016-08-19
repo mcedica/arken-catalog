@@ -1,3 +1,13 @@
+etcd-datavolume:
+  image: busybox
+  command: /bin/true
+  net: none
+  volumes:
+  - /data
+  labels:
+    io.rancher.container.start_once: 'true'
+
+
 etcd:
   image: rancher/etcd:v2.3.7-6
   labels:
@@ -6,16 +16,7 @@ etcd:
   environment:
     RANCHER_DEBUG: '${DEBUG}'
   volumes_from:
-  - etcd-data
-
-etcd-data:
-  image: busybox
-  command: /bin/true
-  net: none
-  volumes:
-  - /data
-  labels:
-    io.rancher.container.start_once: 'true'
+  - etcd-datavolume
 
 
 arken:
