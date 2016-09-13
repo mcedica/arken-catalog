@@ -1,5 +1,5 @@
 # Copied from default Rancher ES Stack : don't modifiy service names
-elasticsearch-masters:
+elasticsearch:
   image: rancher/elasticsearch-conf:v0.4.0
   labels:
     io.rancher.container.hostname_override: container_name
@@ -18,9 +18,9 @@ elasticsearch-base-master:
     elasticsearch.master.config.version: '0'
     io.rancher.container.hostname_override: container_name
   image: elasticsearch:1.7.3
-  net: "container:elasticsearch-masters"
+  net: "container:elasticsearch"
   volumes_from:
-    - elasticsearch-masters
+    - elasticsearch
     - elasticsearch-datavolume-masters
   entrypoint:
     - /opt/rancher/bin/run.sh
@@ -63,7 +63,7 @@ nuxeo:
   image: nuxeo:FT
   links:
   - redis:redis  
-  - elasticsearch-masters:elasticsearch
+  - elasticsearch:elasticsearch
   volumes_from:
   - nuxeo-datavolume
 
