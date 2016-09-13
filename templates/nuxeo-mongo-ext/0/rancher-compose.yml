@@ -54,8 +54,8 @@ nuxeo:
     # Response timeout is measured in milliseconds
     response_timeout: 2000
 
-elasticsearch:
-  sacale: 3
+elasticsearch-masters:
+  scale: 3
   metadata:
     elasticsearch:
       yml:
