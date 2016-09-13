@@ -17,7 +17,7 @@
       label: "List of Nuxeo packages"
       description: |
         List of Nuxeo packages 
-      default: ""
+      default: "nuxeo-web-ui"
     - variable: url
       description: "The URL that this nuxeo instance should serve"
       label: "Nuxeo URL"
