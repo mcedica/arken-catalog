@@ -56,6 +56,7 @@ nuxeo:
     NUXEO_URL: ${url}
     NUXEO_TEMPLATES: default,mongodb
     NUXEO_CUSTOM_PARAM: nuxeo.mongodb.server=${mongoserverurl}
+    LAUNCHER_DEBUG: -Djvmcheck=nofail
   labels:
     io.rancher.sidekicks: nuxeo-datavolume    
     io.rancher.container.hostname_override: container_name
