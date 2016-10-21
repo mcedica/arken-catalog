@@ -12,13 +12,13 @@
       default: ""
       type: "string"
     - variable: "CATTLE_ACCESS_KEY"
-      description: "Rancher API Acess key /set or reply on generated key if configured"
+      description: "Rancher API Acess key /set or rely on generated key if configured"
       label: "Access key:"
       required: false
       default: ""
       type: "string"
     - variable: "CATTLE_SECRET_KEY"
-      description: "Rancher API Secret key /set or reply on generated key if configured"
+      description: "Rancher API Secret key /set or rely on generated key if configured"
       label: "Secret Key:"
       required: false
       default: ""

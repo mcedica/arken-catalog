@@ -29,8 +29,9 @@ arken:
     DRIVER: rancher
     ETCDADDRESS: http://etcd:2379/
   labels:
-   "io.rancher.container.create_agent" :"true"
-   "io.rancher.container.agent.role": "environment"  
+   io.rancher.container.create_agent: 'true'
+   io.rancher.container.agent.role: 'environment'
+     
 gogeta:
   image: arken/gogeta:v2
   links:
