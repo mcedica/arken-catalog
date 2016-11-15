@@ -20,7 +20,7 @@ etcd:
 
 
 arken:
-  image: arken/arken:latest
+  image: mcedica/arken:demo
   links:
     - etcd:etcd
   ports:
@@ -33,7 +33,7 @@ arken:
    io.rancher.container.agent.role: 'environment'
      
 gogeta:
-  image: arken/gogeta:v2
+  image: mcedica/gogeta:demo
   links:
     - etcd:etcd
   ports:
